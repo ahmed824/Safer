@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+@font-face {
+  font-family: "SST Arabic";
+  src: url("/src/app//fonts/alfont_com_AlFont_com_SST-Arabic-Medium.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SST Arabic";
+  src: url("/src/app/fonts/alfont_com_AlFont_com_SST-Arabic-Medium.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+*,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+td,
+th,
+label,
+span,
+strong,
+input,
+select {
+  font-family: "Cairo", sans-serif !important;
+}
+
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+li {
+  list-style: none;
+}
+
+:root {
+  --main-color: #114f4a;
+  --second-color: rgb(6 167 75);
+  --box-shadow: 0 3px 12px #0000002e;
+}
+
+body {
+  font-family: "Cairo", "SST Arabic" !important;
+  overflow-x: hidden !important;
+  text-align: right;
+  direction: rtl;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+a {
+  display: block;
+  color: initial;
+  text-decoration: none !important;
+}
+
+p,
+td,
+th {
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+
+.p-icon {
+  transform: rotate(90deg) !important;
+}
+
+::selection {
+  color: var(--main-color);
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: #fff !important;
+}
+
+.p-icon {
+  transform: rotate(0deg) !important;
+  color: var(--main-color) !important;
+}
+
+/* Using your custom colors */
+/* .modal-container {
+  @apply fixed inset-0 bg-main/50 flex justify-center items-center z-50;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  @apply bg-white p-6 rounded-lg shadow-custom w-96;
+  border: 2px solid var(--second-color);
+  animation: modalFadeIn 0.3s ease-out;
+} */
+
+.modal-header {
+  @apply text-2xl mb-6 font-bold text-center text-main;
+  border-bottom: 2px solid var(--second-color);
+  padding-bottom: 1rem;
+}
+
+/* Table header styles */
+.p-datatable .p-datatable-header {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  border: none;
+}
+
+/* Animation for modal */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom button styles */
+.modal-button {
+  @apply px-4 py-2 rounded-md transition-colors duration-200 bg-main text-white hover:bg-secondary;
+}
+
+.modal-cancel-button {
+  @apply px-4 py-2 rounded-md transition-colors duration-200 bg-gray-200 text-gray-700 hover:bg-gray-300;
+}
+
+/* Input styles */
+.custom-input {
+  @apply w-full mt-1 p-2 border rounded-md;
+  @apply focus:ring-2 focus:ring-secondary focus:border-main;
+}
+
+/* Add these styles to your globals.css */
+.cpRight {
+    @apply hidden md:flex flex-col space-y-2 p-4;
+  }
+  
+  .cpRight a {
+    @apply block py-2 px-4 text-main hover:bg-gray-100 rounded-md transition-colors;
+  }
+  
+  .fav {
+    @apply mt-4 w-full py-2 px-4 bg-main text-white rounded-md hover:bg-secondary transition-colors;
+  }
+  
